@@ -129,29 +129,7 @@
                         </ul>
                     </li>
                 </ul>
-                <!--                <ul class="topnav-right">-->
-                <!--                    <li> <a class="mdonate" href="donation.html"><span>Make a Donation</span></a> </li>-->
-                <!--                    <li> <a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a> </li>-->
-                <!--                    <li class="dropdown">-->
-                <!--                        <a class="cart-icon" href="#" role="button" id="cartdropdown" data-toggle="dropdown"> <i class="fas fa-shopping-cart"></i></a>-->
-                <!--                        <div class="dropdown-menu cart-box" aria-labelledby="cartdropdown">-->
-                <!--                            Recently added item(s)-->
-                <!--                            <ul class="list">-->
-                <!--                                <li class="item">-->
-                <!--                                    <a href="#" class="preview-image"><img class="preview" src="/static/images/pro.jpg" alt=""></a>-->
-                <!--                                    <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>-->
-                <!--                                </li>-->
-                <!--                                <li class="item">-->
-                <!--                                    <a href="#" class="preview-image"><img class="preview" src="/static/images/pro.jpg" alt=""></a>-->
-                <!--                                    <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>-->
-                <!--                                </li>-->
-                <!--                            </ul>-->
-                <!--                            <div class="total">Total: <strong>$44.95</strong></div>-->
-                <!--                            <div class="view-link"><a href="#">Proceed to Checkout</a> <a href="#">View cart </a></div>-->
-                <!--                        </div>-->
-                <!--                    </li>-->
-                <!--                    <li class="login-reg"> <a href="my-account.html">Login</a> | <a href="my-account.html">Signup</a> </li>-->
-                <!--                </ul>-->
+
             </div>
         </nav>
     </header>
@@ -181,10 +159,10 @@
                 </button>
             </div>
             <div class="table-data__tool-right">
-                <a th:href="@{/showNewSupplierForm}" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                  add supplier
+                <a th:href="@{/showNewBuyerForm}" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                    <i class="bi bi-plus"></i>
+                  add buyer
                 </a>
-
             </div>
         </div>
         <div class="table-responsive table-responsive-data2">
@@ -199,15 +177,17 @@
                     </th>
                     <th>first name</th>
                     <th>last name</th>
-                    <th>specialize area</th>
+                    <th>item lists</th>
                     <th>telephone No</th>
                     <th>address</th>
                     <th>date</th>
+                    <th>KG</th>
+
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="supplier : ${listSuppliers}" class=" tr-shadow">
+                <tr th:each="buyer : ${listBuyers}" class=" tr-shadow">
 
                 <td>
                     <label class=" au-checkbox
@@ -216,30 +196,32 @@
                         <span class="au-checkmark"></span>
                     </label>
                 </td>
-                <td th:text="${supplier.firstName}"></td>
+                <td th:text="${buyer.firstName}"></td>
 
-                     <td th:text=" ${supplier.lastName}"></td>
+                     <td th:text=" ${buyer.lastName}"></td>
 
 
 
-                <td th:text="${supplier.specializeArea}" class="desc"></td>
+                <td th:text="${buyer.wantedItems}" class="desc"></td>
 
 
                 <td>
-                    <span th:text="${supplier.telephone}" class=" block-email"></span>
+                    <span th:text="${buyer.telephone}" class=" block-email"></span>
                 </td>
 
-                <td th:text="${supplier.address}"></td>
-                <td  th:text=" ${supplier.date}" class="status--process"></td>
+                <td th:text="${buyer.address}"></td>
+                <td  th:text=" ${buyer.date}" class="status--process"></td>
+                    <td th:text="${buyer.KG}"></td>
 
-                <td>
+
+                    <td>
                     <div class=" table-data-feature">
 
 
-                        <a class="btn btn-outline-primary table-data__tool-right" data-toggle="tooltip" data-placement="top" title="Edit" th:href="@{/showFormForUpdate/{id}(id=${supplier.id})}">
+                        <a class="btn btn-outline-primary table-data__tool-right" data-toggle="tooltip" data-placement="top" title="Edit" th:href="@{/showBuyerFormForUpdate/{id}(id=${buyer.id})}">
                             Edit
                         </a>
-                        <a class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Delete" th:href="@{/deleteSupplier/{id}(id=${supplier.id})}" >
+                        <a class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Delete" th:href="@{/deleteBuyer/{id}(id=${buyer.id})}" >
                             Delete
                         </a>
 <!--                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">-->

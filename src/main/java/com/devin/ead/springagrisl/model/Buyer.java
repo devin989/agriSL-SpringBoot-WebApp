@@ -1,15 +1,10 @@
 package com.devin.ead.springagrisl.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "suppliers")
-public class Supplier {
+@Table(name = "buyers")
+public class Buyer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +16,8 @@ public class Supplier {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "specialize_area")
-    private String specializeArea;
+    @Column(name = "wanted_items")
+    private String wantedItems;
 
     @Column(name = "telephone")
     private String telephone;
@@ -33,6 +28,26 @@ public class Supplier {
     @Column(name = "date")
     private String date;
 
+    @Column(name = "kg")
+    private String KG;
+
+
+
+    public String getWantedItems() {
+        return wantedItems;
+    }
+
+    public void setWantedItems(String wantedItems) {
+        this.wantedItems = wantedItems;
+    }
+
+    public String getKG() {
+        return KG;
+    }
+
+    public void setKG(String KG) {
+        this.KG = KG;
+    }
 
     public String getTelephone() {
         return telephone;
@@ -68,14 +83,6 @@ public class Supplier {
 
     public String getLastName() {
         return lastName;
-    }
-
-    public String getSpecializeArea() {
-        return specializeArea;
-    }
-
-    public void setSpecializeArea(String specializeArea) {
-        this.specializeArea = specializeArea;
     }
 
     public String getDate() {
