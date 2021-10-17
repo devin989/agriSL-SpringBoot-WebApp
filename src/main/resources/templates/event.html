@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,15 +14,16 @@
     <link th:href="@{/css/responsive.css}" rel="stylesheet">
     <link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet">
     <link th:href="@{/css/prettyPhoto.css}" rel="stylesheet">
-    <!--    <link th:href="@{/css/all.min.css}" rel="stylesheet">-->
+    <link th:href="@{/css/theme.css}" rel="stylesheet">
+
     <!-- CSS FILES End -->
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
     <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
 </head>
 <body>
 <div class="wrapper home2">
-
     <!--Header Start-->
     <header class="header-style-2">
         <nav class="navbar navbar-expand-lg">
@@ -56,128 +58,85 @@
     <!--Inner Header Start-->
     <section class="wf100 p100 inner-header">
         <div class="container">
-            <h1>Register here to Purchase your Items.</h1>
+            <h1>Agri events</h1>
             <ul>
-                <li><a th:href="@{redirect:/}">Home</a></li>
-                <li><a th:href="@{/buyers}"> Buyers </a></li>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/showNewEventForm}"> New Event </a></li>
+
             </ul>
         </div>
     </section>
     <!--Inner Header End-->
-    <!--Causes Start-->
-    <section class="wf100 p80">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="myaccount-form">
-                        <h3>Register Buyer Account</h3>
-                        <form action="#" th:action="@{/saveBuyer}" th:object="${buyer}"
-                              method="POST">
-                            <ul class="row">
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{firstName}"
-                                               placeholder="Buyer First Name" required>
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{lastName}"
-                                               placeholder="Buyer Last Name" required>
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{wantedItems}"
-                                               placeholder="Your Item List " required>
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{telephone}"
-                                               placeholder="Telephone No">
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{address}" placeholder="Address" >
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{date}"  placeholder="Date">
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{KG}"  placeholder="Weight">
-                                    </div>
-                                </li>
-<!--                                <li class="col-md-12">-->
-<!--                                    <div class="input-group form-check">-->
-<!--                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-<!--                                        <label class="form-check-label" for="exampleCheck1">I agree to the Terms of <a href="#">Services & Privacy Plicy</a></label>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-                                <li class="col-md-12">
-                                    <button class="register">Save Supplier</button>
-                                </li>
-                            </ul>
-                        </form>
+    <!--Blog Start-->
+    <section class="wf100 p80 blog">
+        <div class="blog-grid-medium">
+            <div class="container">
+                <div class="table-data__tool">
+                    <div class="table-data__tool-left">
+                        <div class="rs-select2--light rs-select2--md">
+                            <select class="js-select2" name="property">
+                                <option selected="selected">All Properties</option>
+                                <option value="">Option 1</option>
+                                <option value="">Option 2</option>
+                            </select>
+                            <div class="dropDownSelect2"></div>
+                        </div>
+                        <div class="rs-select2--light rs-select2--sm">
+                            <select class="js-select2" name="time">
+                                <option selected="selected">Today</option>
+                                <option value="">3 Days</option>
+                                <option value="">1 Week</option>
+                            </select>
+                            <div class="dropDownSelect2"></div>
+                        </div>
+                        <button class="au-btn-filter">
+                            <i class="zmdi zmdi-filter-list"></i>filters
+                        </button>
+                    </div>
+                    <div class="table-data__tool-right">
+                        <a th:href="@{/showNewEventForm}" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                            <i class="bi bi-plus"></i>
+                            add event
+                        </a>
                     </div>
                 </div>
-<!--                <div class="col-lg-4">-->
-<!--                    <div class="login-box">-->
-<!--                        <h3>Login Account</h3>-->
-<!--                        <form>-->
-<!--                            <div class="input-group">-->
-<!--                                <input type="text" class="form-control" placeholder="Username/Email" required>-->
-<!--                            </div>-->
-<!--                            <div class="input-group">-->
-<!--                                <input type="password" class="form-control" placeholder="Password" required>-->
-<!--                            </div>-->
-<!--                            <div class="input-group form-check">-->
-<!--                                <input type="checkbox" class="form-check-input" id="exampleCheck2">-->
-<!--                                <label class="form-check-label" for="exampleCheck2">Remember Me</label>-->
-<!--                                <a href="#" class="fp">Forgot Password</a>-->
-<!--                            </div>-->
-<!--                            <div class="input-group">-->
-<!--                                <button class="login-btn">Login Account</button>-->
-<!--                            </div>-->
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="row">
+
+                    <!--Post Start-->
+                    <div class="col-md-4 col-sm-6" th:each="event : ${listEvents}">
+                        <div class="blog-post">
+                            <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img
+                                    src="/images/blog/bg1-3.jpg" alt=""></div>
+                            <div class="post-txt">
+                                <h5 th:text="${event.title}"></h5>
+                                <p th:text="${event.description}"></p>
+                            </div>
+                            <ul class="post-meta">
+
+                                <li><a href="#" th:text="${event.date}" ></a></li>
+                                <li><a href="#"><i class="fas fa-comments"></i> 134 Comments</a></li>
+                            </ul>
+                            <ul class="post-meta">
+                                <li><a class="btn btn-outline-primary table-data__tool-right" data-toggle="tooltip"
+                                       data-placement="top" title="Edit"
+                                       th:href="@{/showEventFormForUpdate/{id}(id=${event.id})}">
+                                    Edit
+                                </a></li>
+                                <li><a class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top"
+                                       title="Delete" th:href="@{/deleteEvent/{id}(id=${event.id})}">
+                                    Delete
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Blog Small Post End-->
+
+                </div>
+
             </div>
         </div>
     </section>
-    <!--Causes End-->
-
-<!--    <div class="container">-->
-<!--        <h1>Employee Management System</h1>-->
-<!--        <hr>-->
-<!--        <h2>Save Supplier</h2>-->
-
-<!--        <form action="#" th:action="@{/saveSupplier}" th:object="${supplier}"-->
-<!--              method="POST">-->
-<!--            <input type="text" th:field="*{firstName}"-->
-<!--                   placeholder="Supplier First Name" class="form-control mb-4 col-4">-->
-
-<!--            <input type="text" th:field="*{lastName}"-->
-<!--                   placeholder="Supplier Last Name" class="form-control mb-4 col-4">-->
-
-<!--            <input type="text" th:field="*{email}"-->
-<!--                   placeholder="Supplier Email" class="form-control mb-4 col-4">-->
-
-<!--            <input type="text" th:field="*{telephone}"-->
-<!--                   placeholder="Supplier Telephone No" class="form-control mb-4 col-4">-->
-
-<!--            <button type="submit" class="btn btn-info col-2"> Save Supplier</button>-->
-<!--        </form>-->
-
-<!--        <hr>-->
-
-<!--        <a th:href="@{/suppliers}"> Back to Supplier List</a>-->
-<!--    </div>-->
+    <!--Blog End-->
     <!--Footer Start-->
     <footer class="footer">
         <div class="footer-top wf100">
@@ -278,5 +237,7 @@
     </footer>
     <!--Footer End-->
 </div>
+
 </body>
+
 </html>

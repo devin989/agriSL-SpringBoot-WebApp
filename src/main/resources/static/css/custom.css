@@ -545,7 +545,7 @@ section#home-slider img {
 	font-family: 'droidSans';
 }
 .home-about {
-	background: url(../images/aboutbg.jpg) no-repeat #fff;
+	/*background: url(../images/aboutbg.jpg) no-repeat #fff;*/
 }
 .about-pic {
 	position: relative;
@@ -666,7 +666,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	top: 0;
 	width: 100%;
 	height: 140px;
-	background: url(../images/aboutbg.jpg) no-repeat;
+	/*background: url(../images/aboutbg.jpg) no-repeat;*/
 	content: "";
 }
 .ser-col {
