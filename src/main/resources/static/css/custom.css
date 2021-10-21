@@ -776,7 +776,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	position: absolute;
 	right: -54px;
 	bottom: 0;
-	background: url(../images/line.png) no-repeat;
+	/*background: url(../images/line.png) no-repeat;*/
 	content: "";
 	height: 3px;
 	width: 44px;
@@ -1112,7 +1112,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	background-size: cover;
 }
 .pro-title {
-	background: url(../images/border.png) no-repeat left top;
+	/*background: url(../images/border.png) no-repeat left top;*/
 	padding: 67px 0 67px 50px;
 	margin-bottom: 100px;
 }
@@ -1140,7 +1140,7 @@ p.counter-count:after {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: url(../images/line2.png) no-repeat;
+	/*background: url(../images/line2.png) no-repeat;*/
 	content: "";
 	width: 54px;
 	height: 2px;
@@ -1590,6 +1590,7 @@ a.cart-icon:hover, a.search-icon:hover {
 	margin-top: -105px;
 	position: relative;
 	z-index: 99;
+	margin-bottom: 150px;
 }
 section.services-area ul {
 	margin: 0px;
@@ -1922,7 +1923,7 @@ li.form-submit button:hover {
 /***************  Current Projects  *****************/
 
 .current-projects {
-	background: url(../images/mappatt.jpg) no-repeat;
+	/*background: url(../images/mappatt.jpg) no-repeat;*/
 }
 .current-projects div#myTabContent {
 	width: 100%;
@@ -2046,7 +2047,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /*****************  News And Articles  ****************/
 
 .h2-news {
-	background: url(../images/news-artilcesbg.jpg) no-repeat;
+	/*background: url(../images/news-artilcesbg.jpg) no-repeat;*/
 	background-size: cover;
 }
 .blog-post-large {
@@ -2905,7 +2906,7 @@ button.sbtn:hover {
 	left: 0;
 	top: -10px;
 	content: "";
-	background: url(../images/line3.png);
+	/*background: url(../images/line3.png);*/
 	width: 59px;
 	height: 2px;
 }
@@ -2925,7 +2926,7 @@ button.sbtn:hover {
 /**************  Core Projects  ******************/
 
 .our-core-projects {
-	background: url(../images/coreprojectbg.jpg) no-repeat;
+	/*background: url(../images/coreprojectbg.jpg) no-repeat;*/
 	background-size: cover;
 }
 .our-core-projects .owl-theme .owl-nav {

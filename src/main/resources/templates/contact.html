@@ -1,28 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/favicon.png">
     <title>AGRI SL</title>
 
     <!-- CSS FILES START -->
     <link th:href="@{/css/custom.css}" rel="stylesheet">
     <link th:href="@{/css/color.css}" rel="stylesheet">
     <link th:href="@{/css/responsive.css}" rel="stylesheet">
-    <link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet">
     <link th:href="@{/css/prettyPhoto.css}" rel="stylesheet">
-    <!--    <link th:href="@{/css/all.min.css}" rel="stylesheet">-->
+    <link th:href="@{/css/theme.css}" rel="stylesheet">
+
     <!-- CSS FILES End -->
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
     <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
 </head>
 <body>
 <div class="wrapper home2">
-
     <!--Header Start-->
     <header class="header-style-2">
         <nav class="navbar navbar-expand-lg">
@@ -55,67 +55,61 @@
     </header>
 
     <!--Header End-->
+    <!--Inner Header Start-->
+    <section class="wf100 p100 inner-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+            </ul>
+        </div>
+    </section>
+    <!--Inner Header End-->
+    <!--Causes Start-->
     <section class="wf100 p80">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="myaccount-form">
-                        <h3>Update Buyer Account</h3>
-                        <form action="#" th:action="@{/saveBuyer}" th:object="${buyer}"
+                        <h3>ONLINE HELP / INFORMATION REQUEST</h3>
+                        <form action="#" th:action="@{/saveContact}" th:object="${contact}"
                               method="POST">
                             <ul class="row">
-                                <!-- Add hidden form field to handle update -->
-                                <input type="hidden" th:field="*{id}" />
-                                <li class="col-md-6">
+                                <li class="col-lg-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{firstName}"
-                                               placeholder="Supplier First Name" required>
+                                        <input type="text" class="form-control" th:field="*{title}"
+                                               placeholder="Title" required>
                                     </div>
                                 </li>
-                                <li class="col-md-6">
+
+                                <li class="col-lg-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{lastName}"
-                                               placeholder="Supplier Last Name" required>
+                                        <input type="text" class="form-control" th:field="*{contactNo}"  placeholder="Contact No">
                                     </div>
                                 </li>
-                                <li class="col-md-6">
+                                <li class="col-lg-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{wantedItems}"
-                                               placeholder="Your Item List " required>
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{telephone}"
-                                               placeholder="Telephone No">
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{address}" placeholder="Address" >
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{date}"  placeholder="Date">
-                                    </div>
-                                </li>
-                                <li class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" th:field="*{KG}"  placeholder="Weight">
+                                        <textarea  rows="4" cols="50" type="text" class="form-control" th:field="*{description}"
+                                                   placeholder="Description" required></textarea>
                                     </div>
                                 </li>
                                 <li class="col-md-12">
-                                    <button class="register">Update Buyer</button>
+                                    <div class="input-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">I agree to the Terms of <a href="#">Services & Privacy Policy</a></label>
+                                    </div>
+                                </li>
+                                <li class="col-md-12">
+                                    <button class="register">Send</button>
                                 </li>
                             </ul>
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
-    <!--Causes End-->
 
     <!--Footer Start-->
     <footer class="footer">
@@ -124,7 +118,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
 
-                    <!--Footer Widget Start-->
+                        <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>About AgriSL</h4>
                             <p> AgriSL is platform for the sri lankan farmers that would help to them to acquire agricultural supplyments and to sale their product to buyers. It will grow today’s economy, it’s saving money, including a broad range of green agricultural supplier and merchants who are waiting to buy, helping people save time, and other resources.  </p>
@@ -134,7 +128,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
 
-                    <!--Footer Widget Start-->
+                        <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>Our Promises</h4>
                             <ul class="quick-links">
@@ -151,7 +145,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
 
-                    <!--Footer Widget Start-->
+                        <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>Latest Events</h4>
                             <ul class="lastest-products">
@@ -179,5 +173,7 @@
     </footer>
     <!--Footer End-->
 </div>
+
 </body>
+
 </html>

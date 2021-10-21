@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.png">
-    <title>ECO HTML</title>
+    <title>AGRI SL</title>
+
     <!-- CSS FILES START -->
     <link th:href="@{/css/custom.css}" rel="stylesheet">
     <link th:href="@{/css/color.css}" rel="stylesheet">
@@ -43,7 +44,7 @@
                         <a class="nav-link "  role="button" th:href="@{/buyers}" aria-haspopup="true" aria-expanded="false"> Buyers </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="https://www.deveenrathnayake.me"  role="button" aria-haspopup="true" aria-expanded="false"> Contact </a>
+                        <a class="nav-link " th:href="@{/contacts}"  role="button" aria-haspopup="true" aria-expanded="false"> Contact </a>
 
                     </li>
                 </ul>
@@ -136,39 +137,15 @@
         </div>
     </section>
     <!--Causes End-->
-<!--    <div class="container">-->
-<!--        <h1>Employee Management System</h1>-->
-<!--        <hr>-->
-<!--        <h2>Save Supplier</h2>-->
 
-<!--        <form action="#" th:action="@{/saveSupplier}" th:object="${supplier}"-->
-<!--              method="POST">-->
-
-<!--            &lt;!&ndash; Add hidden form field to handle update &ndash;&gt;-->
-<!--            <input type="hidden" th:field="*{id}" />-->
-
-<!--            <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4">-->
-
-<!--            <input type="text" th:field="*{lastName}" class="form-control mb-4 col-4">-->
-
-<!--            <input type="text" th:field="*{email}" class="form-control mb-4 col-4">-->
-<!--            <input type="text" th:field="*{telephone}" class="form-control mb-4 col-4">-->
-
-
-<!--            <button type="submit" class="btn btn-info col-2"> Update Supplier</button>-->
-<!--        </form>-->
-
-<!--        <hr>-->
-
-<!--        <a th:href = "@{/}"> Back to Employee List</a>-->
-<!--    </div>-->
     <!--Footer Start-->
     <footer class="footer">
         <div class="footer-top wf100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>About AgriSL</h4>
                             <p> AgriSL is platform for the sri lankan farmers that would help to them to acquire agricultural supplyments and to sale their product to buyers. It will grow today’s economy, it’s saving money, including a broad range of green agricultural supplier and merchants who are waiting to buy, helping people save time, and other resources.  </p>
@@ -176,8 +153,9 @@
                         </div>
                         <!--Footer Widget End-->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>Our Promises</h4>
                             <ul class="quick-links">
@@ -192,8 +170,9 @@
                         </div>
                         <!--Footer Widget End-->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>Latest Events</h4>
                             <ul class="lastest-products">
@@ -204,47 +183,7 @@
                         </div>
                         <!--Footer Widget End-->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                            <div id="fpro-slider" class="owl-carousel owl-theme">
-                                <!--Footer Product Start-->
-                                <div class="item">
-                                    <div class="f-product">
-                                        <img src="/images/fpro1.jpg" alt="">
-                                        <div class="fp-text">
-                                            <h6><a href="#">Buy T-Shirts</a></h6>
-                                            <strong>$19.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Footer Product End-->
-                                <!--Footer Product Start-->
-                                <div class="item">
-                                    <div class="f-product">
-                                        <img src="/images/fpro1.jpg" alt="">
-                                        <div class="fp-text">
-                                            <h6><a href="#">Buy T-Shirts</a></h6>
-                                            <strong>$19.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Footer Product End-->
-                                <!--Footer Product Start-->
-                                <div class="item">
-                                    <div class="f-product">
-                                        <img src="images/fpro1.jpg" alt="">
-                                        <div class="fp-text">
-                                            <h6><a href="#">Buy T-Shirts</a></h6>
-                                            <strong>$19.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Footer Product End-->
-                            </div>
-                        </div>
-                        <!--Footer Widget End-->
-                    </div>
+
                 </div>
             </div>
         </div>

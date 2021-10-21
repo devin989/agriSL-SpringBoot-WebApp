@@ -7,12 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.png">
-    <title>ECO HTML</title>
+    <title>AGRI SL</title>
+
     <!-- CSS FILES START -->
     <link th:href="@{/css/custom.css}" rel="stylesheet">
     <link th:href="@{/css/color.css}" rel="stylesheet">
     <link th:href="@{/css/responsive.css}" rel="stylesheet">
-    <link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet">
     <link th:href="@{/css/prettyPhoto.css}" rel="stylesheet">
     <link th:href="@{/css/theme.css}" rel="stylesheet">
 
@@ -45,7 +45,8 @@
                         <a class="nav-link "  role="button" th:href="@{/buyers}" aria-haspopup="true" aria-expanded="false"> Buyers </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="https://www.deveenrathnayake.me"  role="button" aria-haspopup="true" aria-expanded="false"> Contact </a>
+                        <a class="nav-link " th:href="@{/contacts}"  role="button" aria-haspopup="true" aria-expanded="false"> Contact </a>
+
 
                     </li>
                 </ul>
@@ -58,7 +59,7 @@
     <!--Inner Header Start-->
     <section class="wf100 p100 inner-header">
         <div class="container">
-            <h1>Register here for share your Event.</h1>
+            <h1>Register here to share your Event.</h1>
             <ul>
                 <li><a th:href="@{/}">Home</a></li>
                 <li><a th:href="@{/events}"> Events </a></li>
@@ -94,12 +95,12 @@
                                                    placeholder="Event Description" required></textarea>
                                     </div>
                                 </li>
-<!--                                                                <li class="col-md-12">-->
-<!--                                                                    <div class="input-group form-check">-->
-<!--                                                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-<!--                                                                        <label class="form-check-label" for="exampleCheck1">I agree to the Terms of <a href="#">Services & Privacy Plicy</a></label>-->
-<!--                                                                    </div>-->
-<!--                                                                </li>-->
+                                                                <li class="col-md-12">
+                                                                    <div class="input-group form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                                        <label class="form-check-label" for="exampleCheck1">I agree to the Terms of <a href="#">Services & Privacy Plicy</a></label>
+                                                                    </div>
+                                                                </li>
                                 <li class="col-md-12">
                                     <button class="register">Save Event</button>
                                 </li>
@@ -117,8 +118,9 @@
         <div class="footer-top wf100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>About AgriSL</h4>
                             <p> AgriSL is platform for the sri lankan farmers that would help to them to acquire agricultural supplyments and to sale their product to buyers. It will grow today’s economy, it’s saving money, including a broad range of green agricultural supplier and merchants who are waiting to buy, helping people save time, and other resources.  </p>
@@ -126,8 +128,9 @@
                         </div>
                         <!--Footer Widget End-->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>Our Promises</h4>
                             <ul class="quick-links">
@@ -142,8 +145,9 @@
                         </div>
                         <!--Footer Widget End-->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <!--Footer Widget Start-->
                         <div class="footer-widget">
                             <h4>Latest Events</h4>
                             <ul class="lastest-products">
@@ -151,47 +155,6 @@
                                 <li> <img src="/images/flp2.jpg" alt=""> <strong><a href="#">Eliminate your plastic bottle pollution & keep...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
                                 <li> <img src="/images/flp3.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
                             </ul>
-                        </div>
-                        <!--Footer Widget End-->
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                            <div id="fpro-slider" class="owl-carousel owl-theme">
-                                <!--Footer Product Start-->
-                                <div class="item">
-                                    <div class="f-product">
-                                        <img src="/images/fpro1.jpg" alt="">
-                                        <div class="fp-text">
-                                            <h6><a href="#">Buy T-Shirts</a></h6>
-                                            <strong>$19.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Footer Product End-->
-                                <!--Footer Product Start-->
-                                <div class="item">
-                                    <div class="f-product">
-                                        <img src="/images/fpro1.jpg" alt="">
-                                        <div class="fp-text">
-                                            <h6><a href="#">Buy T-Shirts</a></h6>
-                                            <strong>$19.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Footer Product End-->
-                                <!--Footer Product Start-->
-                                <div class="item">
-                                    <div class="f-product">
-                                        <img src="images/fpro1.jpg" alt="">
-                                        <div class="fp-text">
-                                            <h6><a href="#">Buy T-Shirts</a></h6>
-                                            <strong>$19.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Footer Product End-->
-                            </div>
                         </div>
                         <!--Footer Widget End-->
                     </div>
